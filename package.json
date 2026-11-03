@@ -17,5 +17,8 @@
     "index.js",
     "LICENSE"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "peerDependencies": {
+    "discord.js": "^14.0.0"
+  }
 }
