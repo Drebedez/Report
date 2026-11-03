@@ -1,0 +1,21 @@
+{
+  "name": "@dm-staff/report",
+  "version": "1.0.0",
+  "description": "Sistema que ofrece herramientas de reportes para poder manejar reportes de discord de manera general.",
+  "main": "index.js",
+  "keywords": [
+    "report",
+    "discord"
+  ],
+  "author": "Raymond J. Aleman Delgado",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "scripts/",
+    "index.js",
+    "LICENSE"
+  ],
+  "license": "MIT"
+}
