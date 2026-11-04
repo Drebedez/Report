@@ -1,5 +1,5 @@
-import { Report } from "./scripts/Report";
-import { ReportForm } from "./scripts/ReportForm";
+import { Report } from "./scripts/Report.js";
+import { ReportForm } from "./scripts/ReportForm.js";
 
 export {
     Report,

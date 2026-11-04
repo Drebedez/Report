@@ -6,7 +6,7 @@ import {
     Client
 } from 'discord.js';
 
-import { ReportForm } from './ReportForm';
+import { ReportForm } from './ReportForm.js';
 
 class Report {
 
