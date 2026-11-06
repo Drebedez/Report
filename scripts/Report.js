@@ -3,10 +3,12 @@ import {
     ButtonStyle,
     ButtonBuilder,
     Events,
-    Client
+    Client,
+    MessageFlags
 } from 'discord.js';
 
 import { ReportForm } from './ReportForm.js';
+import { ReportFormLogBuilder } from './ReportFromLogBuilder.js';
 
 class Report {
 
@@ -24,18 +26,22 @@ class Report {
             }
         }
         if(interaction.isModalSubmit()){
-            if(interaction.customId == ScriptConfig.FormReportSystemID){
-                for(const handlers of this.#reportFormHandlers)
-                    handlers();
+            if(interaction.customId == ScriptConfig.reportForm.id){
+                for(const handler of this.#reportFormHandlers)
+                    handler(new ReportFormLogBuilder(interaction));
+                interaction.reply({
+                    content: ScriptConfig.reportForm.submitMessage,
+                    flags: MessageFlags.Ephemeral
+                });
             }
         }
     }
 
     /**
      * Menajer envios de formularios de reporte.
-     * @param {()=>reportFormLogBuilder} callback 
+     * @param {(form: ReportFormLogBuilder)=>void} callback 
      */
-    static setFormReportHandler(callback){
+    static addFormReportHandler(callback){
         if(typeof callback != 'function')
             throw Error(ScriptConfig.Error.NOT_GETTED_FUNCTION);
         this.#reportFormHandlers.push(callback);
@@ -54,7 +60,7 @@ class Report {
         if(!(client instanceof Client))
             throw Error(ScriptConfig.Error.NOT_INSTANCED_CLIENT);
 
-        client.on(Events.InteractionCreate, this.#ReportInteractionHandler);
+        client.on(Events.InteractionCreate, (interaction)=>this.#ReportInteractionHandler(interaction));
 
         this.#clientSet = true;
     }
