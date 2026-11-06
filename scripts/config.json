@@ -6,8 +6,7 @@
             "log": "#3352ff"
         }
     },
-    "ButtonReportID": "buttonReportSystem",
-    "FormReportSystemID": "reportFormSystem",
+    "ButtonReportID": "37844c3f-6bf7-4638-af8f-3bf4216fae18",
     "Error": {
         "NOT_GETTED_STRING": "No se obtuvo una cadena de texto.",
         "CLIENT_SETED": "El manejador de eventos ya fue declarado.",
@@ -18,29 +17,30 @@
     },
     "reportForm": {
         "title": "Report",
-        "id": "reportSystemForm",
+        "id": "6f9f3154-622d-462a-bbd6-4c49568a65fd",
         "inputTitle": {
             "label": "Title:",
-            "id": "title",
+            "id": "453ec511-ee71-464b-bdbb-d90205ada647",
             "placeholder": "Short description of the problem."
         },
         "menuStringOption": {
             "label": "Category:",
-            "id": "reportType",
+            "id": "2a55bcbe-2d92-4998-88fd-45a1af7b1c13",
             "placeholder": "Choose a category.",
             "minCharts": 1,
             "maxCharts": 100
         },
         "inputForm": {
-            "label": "Form:",
-            "id": "inputForm",
+            "label": "Message:",
+            "id": "ee46cf29-7723-44a6-9351-1d913b22b181",
             "placeholder": "Describe your problem."
         },
         "fileUpload": {
             "label":"Files:",
             "description":"(Optional): Upload files that help to understand and/or solve the problem.",
-            "id": "reportFiles",
+            "id": "540c30f6-24a3-43d4-8284-796ca947e78e",
             "maxFiles": 10
-        }
+        },
+        "submitMessage":"Your report has been successfully submitted. You may receive a response based on the report you submitted if it is necessary to resolve or clarify the issue."
     }
 }
