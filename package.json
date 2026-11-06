@@ -1,6 +1,6 @@
 {
   "name": "@dm-staff/report",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Sistema que ofrece herramientas de reportes para poder manejar reportes de discord de manera general.",
   "main": "index.js",
   "keywords": [
