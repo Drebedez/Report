@@ -44,7 +44,7 @@ class ReportFormLogBuilder {
         this.date = Temporal.Now.plainDateTimeISO();
 
         this.reportForm.title = interaction.fields.getTextInputValue(ScriptConfig.reportForm.inputTitle.id);
-        this.reportForm.category = interaction.fields.getStringSelectValues(ScriptConfig.reportForm.menuStringOption.id);
+        this.reportForm.category = interaction.fields.getStringSelectValues(ScriptConfig.reportForm.menuStringOption.id)[0];
         this.reportForm.message = interaction.fields.getTextInputValue(ScriptConfig.reportForm.inputForm.id);
         this.reportForm.files = interaction.fields.getUploadedFiles(ScriptConfig.reportForm.fileUpload.id);
     }
