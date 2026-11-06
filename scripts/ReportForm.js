@@ -1,3 +1,4 @@
+import ScriptConfig from './config.json' with {type:'json'};
 import {
     ModalBuilder,
     LabelBuilder,
@@ -32,7 +33,7 @@ class ReportForm{
             .setCustomId(ScriptConfig.reportForm.id);
 
         const titleInput = new TextInputBuilder()
-            .setCustomId(ScriptConfig.reportForm.id)
+            .setCustomId(ScriptConfig.reportForm.inputTitle.id)
             .setStyle(TextInputStyle.Short)
             .setPlaceholder(ScriptConfig.reportForm.inputTitle.placeholder)
             .setRequired(true)
