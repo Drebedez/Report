@@ -21,7 +21,7 @@ class Report {
      */
     static #ReportInteractionHandler(interaction){
         if(interaction.isButton()){
-            if(interaction.customId == ScriptConfig.ButtonReportID){
+            if(interaction.customId == ScriptConfig.reportButton.id){
                 interaction.showModal(ReportForm.getDiscordReportForm());
             }
         }
@@ -75,8 +75,8 @@ class Report {
             throw Error(ScriptConfig.Error.NOT_GETTED_STRING);
 
         return  new ButtonBuilder()
-                .setCustomId(ScriptConfig.ButtonReportID)
-                .setLabel(`Reportar: ${label}`)
+                .setCustomId(ScriptConfig.reportButton.id)
+                .setLabel(`${ScriptConfig.reportButton.label}${label}`)
                 .setEmoji(ScriptConfig.Representations.emoji)
                 .setStyle(ButtonStyle.Danger);
     }

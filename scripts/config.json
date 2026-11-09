@@ -6,7 +6,10 @@
             "log": "#3352ff"
         }
     },
-    "ButtonReportID": "37844c3f-6bf7-4638-af8f-3bf4216fae18",
+    "reportButton":{
+        "label":"Report: ",
+        "id":"37844c3f-6bf7-4638-af8f-3bf4216fae18"
+    },
     "Error": {
         "NOT_GETTED_STRING": "No se obtuvo una cadena de texto.",
         "CLIENT_SETED": "El manejador de eventos ya fue declarado.",
